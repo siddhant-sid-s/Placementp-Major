@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat: wght@200; 300;400;500;600;700&display=swap');
+.pd{
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    background: #fff;
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .table-res{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+  }
+
+  .std{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card th{
+    background-color: #27374d;
+    color: #dde6ed;
+  }
+  
+  /* Styling for the section containing the content */
+  .card section {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the placement prediction section */
+  .card section h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the table */
+  .card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+
+  .card th,
+  .card td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #role{
+    background-color: #f2f2f2;
+  }
+  
+  /* Styling for the sorry message */
+  .card .sorry-message {
+    font-size: 18px;
+    color: #ff0000;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+
+  .goback{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 768px) {
+    .card table {
+      width: 100%;
+      overflow-x: auto; /* Add horizontal scroll for smaller screens */
+    }
+  
+    .card th,
+    .card td {
+      white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .card th,
+    .card td {
+        padding: 6px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+
+  }
+  

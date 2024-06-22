@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn {
+  color: #dadada;
+  padding: 14px 25px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  opacity: 1;
+  background: rgb(120 90 90 / 30%);
+}
+
+.btn img{
+  width: 20px;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background: #011634; /* Darken the background on hover */
+  color: rgb(215, 175, 175); /* Change text color on hover */
+}
+
+.home {
+    position: relative; /* Required for pseudo-element positioning */
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents the blur from causing scrollbars */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/Home_Background2.jpg) no-repeat center center / cover;
+    filter: blur(10px); /* Adjust the blur intensity as needed */
+    z-index: -2; /* Places the pseudo-element behind the content */
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1; /* Places the pseudo-element behind the content but above the blurred image */
+}
+
+.home-text {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative; /* Keeps the text in front of the pseudo-elements */
+    z-index: 1; /* Ensures text is above the pseudo-elements */
+}
+
+.home-text h1 {
+    font-size: 4vw; /* Responsive font size */
+    font-weight: 300;
+}
+
+.home-text p {
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+}
+
+
+
+/* Media Queries for smaller screens */
+
+
+@media (max-width: 1000px){
+    .container{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .home-text h1 {
+        font-size: 8vw;
+    }
+}
+@media (max-width:840px){
+    .home-text h1{
+        font-size: 30px;
+        max-width: 400px;
+        margin: auto;
+    }
+    
+    .home-text p{
+        font-size: 14px;
+        margin: 15px auto 30px;
+
+    }
+}

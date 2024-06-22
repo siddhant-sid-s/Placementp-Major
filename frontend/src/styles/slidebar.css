@@ -1,0 +1,143 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  height: 100%;
+  transition: width 0.3s;
+  width: 250px; /* Default expanded width */
+}
+
+.menu.collapsed {
+  width: 60px;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 58px; /* Adjust the width of the logo image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-list .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: #27374d;
+}
+
+.menu-list .item:hover {
+  background: #27374d;
+  color: #dde6ed;
+}
+
+.collapsed-content {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.menu.collapsed .collapsed-content {
+  display: flex; /* Display when menu is collapsed */
+}
+
+.collapsed-lines {
+  width: 30px;
+  height: 2px;
+  background-color: #27374d;
+  margin-bottom: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+  .menu {
+      width: 200px; /* Adjust width for larger tablets */
+  }
+
+  .logo {
+      padding: 15px; /* Adjust padding for larger tablets */
+  }
+
+  .logo img {
+      width: 50px; /* Adjust the width of the logo for larger tablets */
+  }
+
+  .menu-list .item {
+      font-size: 0.95rem;
+      padding: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+      width: auto; /* Force collapse on smaller screens */
+  }
+
+  .logo {
+      padding: 10px; /* Adjust padding for tablets */
+  }
+
+  .logo img {
+      width: 48px; /* Adjust the width of the logo for tablets */
+  }
+
+  .menu-list .item {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
+
+  .menu-list .item:hover {
+      background: none; /* Remove hover background on collapsed menu items */
+      color: #27374d;
+  }
+
+  .collapsed-lines {
+      width: 20px;
+      height: 1.5px;
+      margin-bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+      width: auto; /* Force collapse on mobile screens */
+  }
+
+  .logo {
+      padding: 8px; /* Adjust padding for mobile */
+  }
+
+  .logo img {
+      width: 38px; /* Further reduce the width for very small screens */
+  }
+
+  .menu-list .item {
+      font-size: 0.8rem;
+      padding: 6px;
+  }
+
+  .collapsed-lines {
+      width: 15px;
+      height: 1px;
+      margin-bottom: 3px;
+  }
+}

@@ -1,0 +1,87 @@
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .card table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .card th,
+  .card td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #role {
+    background-color: #f2f2f2;
+  }
+  
+  .card .sorry-message {
+    font-size: 18px;
+    color: #ff0000;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+  
+  .goback {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .table-container {
+      overflow-x: auto;
+    }
+  
+    .card th,
+    .card td {
+      white-space: nowrap;
+    }
+  
+    .card th,
+    .card td {
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+  
+  .action-button {
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .action-button.edit {
+    background-color: #008CBA; /* Blue */
+  }
+  
+  .action-button.delete {
+    background-color: #f44336; /* Red */
+  }
+  
+  .action-button:hover {
+    background-color: #555;
+  }
+  
+  .action-button:hover.edit {
+    background-color: #0073e6; /* Darker blue */
+  }
+  
+  .action-button:hover.delete {
+    background-color: #d63333; /* Darker red */
+  }
+  
